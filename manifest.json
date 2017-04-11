@@ -3,7 +3,7 @@
 
 	"name" : "FT UUID Ops",
 	"description" : "This extension identifies FT UUIDs and provides specific actions",
-	"version" : "0.1",
+	"version" : "1.0.1",
 
 	"icons": { "128": "ftlogo.png",
 				"32": "ft32.ico",
@@ -13,8 +13,6 @@
 	"permissions" : [
 		"activeTab",
 		"https://ajax.googleapis.com/",
-		"identity",
-		"identity.email",
 		"storage"
 	],
 	"browser_action": {
