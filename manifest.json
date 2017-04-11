@@ -1,0 +1,31 @@
+{
+	"manifest_version" : 2,
+
+	"name" : "FT UUID Ops",
+	"description" : "This extension identifies FT UUIDs and provides specific actions",
+	"version" : "0.1",
+
+	"icons": { "128": "ftlogo.png",
+				"32": "ft32.ico",
+				"16": "ft16.ico"},
+
+	"options_page": "options.html",
+	"permissions" : [
+		"activeTab",
+		"https://ajax.googleapis.com/",
+		"identity",
+		"identity.email",
+		"storage"
+	],
+	"browser_action": {
+        "default_icon": "ftlogo.png",
+        "default_popup": "popup.html"
+    }, 
+	"content_scripts" : [{
+			"matches" : ["<all_urls>"],
+			"css" : ["styles.css"],
+			"js" : ["jquery-2.1.4.min.js", "actions.js", "uuids.js"]
+		}
+	]
+	/*http://www.iconarchive.com/show/fugue-icons-by-yusuke-kamiyamane/fingerprint-icon.html*/
+}

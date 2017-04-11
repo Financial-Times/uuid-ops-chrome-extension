@@ -1,0 +1,93 @@
+#extension-popup {
+  width: 300px;
+  height: 180px;
+  color: #414141;
+  background: #fff1e0;
+  padding: 6px 8px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+#extension-popup input {
+	width: 270px;
+	margin-bottom: 5px;
+}
+
+/** detail panel **/
+#uuid-details-pane {
+  display: block;
+  color: #414141;
+  background: #fff1e0;
+  border: 1px solid rgba(39,117,123,.15);
+  border-radius: 3px;
+  position: absolute;
+  z-index: 99999;
+  width: 300px;
+  padding: 6px 8px;
+  -webkit-box-shadow: 1px 3px 3px rgba(0,0,0,0.4);
+  -moz-box-shadow: 1px 3px 3px rgba(0,0,0,0.4);
+  box-shadow: 1px 3px 3px rgba(0,0,0,0.4);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+#extension-popup button ,
+#uuid-details-pane button {
+	border: 1px solid rgba(39,117,123,.15);
+	border-radius: 3px;
+	background-color: white;
+	color: black;
+	margin-bottom: 5px;
+	font-weight: bold;
+	width: 100px;
+	text-align: center;
+}
+
+#extension-popup button:hover ,
+#uuid-details-pane button:hover {
+	background-color: #C0C0C0;
+}
+
+#uuid-details-pane table {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
+#uuid-details-pane[id^="details-"] {
+	font-weight:bold;
+}
+
+#uuid-details-pane h3 {
+  font-size: 14px;
+  //line-height: 1.1em;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  color: #27757b;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+#uuid-details-pane .desc {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+#uuid-details-pane #extraDetails {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 390px;
+	display: none;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 100%;
+	font-size: 9px;
+	background: white;
+}
+
+#uuid-details-pane #extraDetails table{
+	font-size: 9px;
+}
+

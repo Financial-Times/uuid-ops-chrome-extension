@@ -1,0 +1,120 @@
+<html>
+	<head>
+	<script src="jquery-2.1.4.min.js"></script>
+	<script src="options.js"></script>
+	<script src="actions.js"></script>
+	<title>FT UUID Ops - Configuration</title>
+	<style>
+		body {
+			font-family: MetricWeb,sans-serif;
+			height: auto;
+			background-color: #fdf8f2;
+			padding: 0px;
+			margin: 0px
+		}
+	
+		fieldset {
+			margin-bottom: 10px;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		
+		input {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		li {
+			list-style: none;
+		}
+		li span {
+			margin-right: 20px;
+		}
+		li button {
+			padding: 2px;
+			margin-right: 20px;
+			margin-bottom: 5px;
+			width: 16px;
+		}
+		li .deleteButton {
+			color: red;
+			font-weight: bold;
+		}
+		.hint {
+			font-size: 12px;
+			font-weight: normal;
+			color: gray;
+		}
+		#header {
+			color: #eeeeee;
+			background: #2e6e9e;
+			padding: 0.025px 10px 0.025px 10px;
+			border-radius: 2px 2px 0 0;
+			width: 100%;
+		}
+
+		#content {
+			padding: 10px 10px 10px 10px;
+		}
+
+		#status {
+			margin-bottom: 10px;
+			display: none;
+		}
+
+		button {
+			text-align: center;
+			width: 200px;
+			color: #2e6e9e;
+			background-color: hsla(0,0%,100%,.4);
+			border: 1px solid rgba(39,117,123,.15);
+			border-radius: 3px;
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+		.itemName {
+			display: inline-block;
+			width: 250px;
+			font-weight: bold;
+		}
+	</style>
+	</head>
+	<body>
+		<div id='header'>
+			<h3>FT UUID Ops</h3>
+		</div>
+		<div id='content'>
+			<div id='status'></div>
+      
+        <fieldset>
+            <legend>API key</legend>
+            <label for="text_apikey">
+				<input type="text" name="text_apikey" value="" id="text_apikey" size="40" placeholder="Enter your API key here" checked>
+			</label>
+			<button id="saveButton" type="button">Save</button>
+        </fieldset>
+		<fieldset>
+            <legend>Actions</legend>
+			<ul id="current_actions">
+				<li>
+					
+				</li>
+			</ul>
+			<hr>
+			<label for="text_name">
+				Action name <input type="text" name="text_name" value="" id="text_name" size="20" placeholder="Enter the action name" checked><span class="hint">Short name of the action to show on buttons</span>
+			</label>
+			<label for="text_url">
+				URL <input type="text" name="text_url" value="" id="text_url" size="60" placeholder="Enter a new URL" checked><span class="hint">Hint: use %uuid for the UUID and %apiKey for the global API key defined above</span>
+			</label>
+			<button name="add_action_button" id="add_action_button">Add action</button>
+			<br>
+			<button name="default_actions_button" id="default_actions_button">Restore defaults</button>
+			
+        </fieldset>
+        
+    
+		</div>
+	</body>
+</html>
