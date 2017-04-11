@@ -22,6 +22,10 @@ function initSettings(callback) {
 		cachedStorage = items;
 		if (cachedStorage == null || cachedStorage["uuid-settings"] == null || cachedStorage["uuid-settings"]["initialized"] != true) {
 			initDefaults();
+			var settings = cachedStorage["uuid-settings"];
+			if (settings == null) {
+				settings = {};
+			}
 			settings.initialized = true;
 			setSettings(settings);
 		}
@@ -33,11 +37,6 @@ function initSettings(callback) {
 }
 
 function initDefaults() {
-	var action = {};
-	action.name = "Copy";
-	action.id = action.name.hashCode();
-	action.url = "";
-	action.type = "copy";
 	setAction({name: "Copy", id: "Copy".hashCode(), url: "", type: "copy"});
 	setAction({name: "CAPI V2", id: "CAPI V2".hashCode(), url: "http://api.ft.com/content/%uuid?apiKey=%apiKey", type: "url"});
 	setAction({name: "CAPI V1", id: "CAPI V1".hashCode(), url: "http://api.ft.com/content/items/v1/%uuid?apiKey=%apiKey", type: "url"});
